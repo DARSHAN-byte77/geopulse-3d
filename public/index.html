@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GeoPulse 3D — Real-Time Telemetry</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="canvas-container"></div>
+  <div class="hud-overlay">
+    <div class="hud-header">
+      <h2>GEOPULSE <span>3D</span></h2>
+      <p>Live Global Telemetry</p>
+    </div>
+    <div class="hud-stats">
+      <div class="stat-box">
+        <span class="label">SPEED</span>
+        <span class="value">50 req/s</span>
+      </div>
+      <div class="stat-box">
+        <span class="label">EVENTS</span>
+        <span class="value" id="event-count">0</span>
+      </div>
+      <div class="stat-box">
+        <span class="label">NODES</span>
+        <span class="value" id="active-nodes">0 / 5000</span>
+      </div>
+    </div>
+    <div class="hud-log">
+      <div class="log-title">LIVE FEED</div>
+      <div id="log-list"></div>
+    </div>
+  </div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
